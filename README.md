@@ -124,9 +124,16 @@ In order to build a development version run:
 docker compose build
 ```
 It calls `mvn install` by default. If you would like to customize mvn build arguments you can do so by running:
+#### Linux/macOS
 ```bash
 docker compose build --build-arg MVN_ARGS='install -DskipTests'
 ```
+
+#### Windows (Command Prompt)
+```
+docker compose build --build-arg MVN_ARGS="install -DskipTests"
+```
+
 It is also possible to use the built dev image to run jetty:
 ```bash
 docker compose up
